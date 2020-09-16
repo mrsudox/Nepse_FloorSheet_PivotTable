@@ -418,9 +418,7 @@ $("#refresh").click(function () {
 					var arr_3 = arr_1.concat(arr_2);
 					localStorage.setItem("floorsheet", JSON.stringify(arr_3));
 					location.reload();
-				} else {
-                  document.getElementById("loading").innerHTML = "Something Went Wrong... Please Reload Floorsheet Data";  
-                }
+				} 
 			});
 		}
 	}).catch(function () {
