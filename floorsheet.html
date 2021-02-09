@@ -380,7 +380,10 @@ $("#refresh").click(function () {
 		"preset": "enery",
 		"value": 0
 	});
-	$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('https://newweb.nepalstock.com.np/api/nots/nepse-data/floorsheet?&size=2000&sort=contractId,asc') + '&callback=?', function (data) {
+
+    
+
+	$.getJSON('http://api.allorigins.win/get?url=' + encodeURIComponent('https://newweb.nepalstock.com.np/api/nots/nepse-data/floorsheet?&size=2000&sort=contractId,asc') + '&callback=?', function (data) {
 		var obj = data.contents;
 		var json = JSON.parse(obj);
 		var tE = json.floorsheets.totalElements;
@@ -399,7 +402,7 @@ $("#refresh").click(function () {
 		let completedCount = 1;
 		var loading = 2000;
 		for (var x = 1; x < tP; x++) {
-			$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('https://newweb.nepalstock.com.np/api/nots/nepse-data/floorsheet?page=' + x + '&size=2000&sort=contractId,asc') + '&callback=?', function (data) {
+			$.getJSON('http://api.allorigins.win/get?url=' + encodeURIComponent('https://newweb.nepalstock.com.np/api/nots/nepse-data/floorsheet?page=' + x + '&size=2000&sort=contractId,asc') + '&callback=?', function (data) {
 				var obj = data.contents;
 				var json = JSON.parse(obj);
 				var nOE = json.floorsheets.numberOfElements;
